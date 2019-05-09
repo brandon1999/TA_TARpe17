@@ -9,8 +9,8 @@ namespace Kangelased
     class Kangelased
     {
 
-        private string _Nimi;
-        private string _Asukoht;
+        protected string _Nimi;
+        protected string _Asukoht;
 
         public Kangelased(string Nimi, string Asukoht) {
 
@@ -25,7 +25,7 @@ namespace Kangelased
             get { return _Asukoht; }
             set { _Asukoht = value; }
         }
-        public int Päästa(int Ohustatuid)
+        public virtual int Päästa(int Ohustatuid)
         {
             return (int)Math.Round(Ohustatuid * 95.0 / 100);
         }
